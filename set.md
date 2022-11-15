@@ -43,3 +43,35 @@ $B \subseteq A$이고 $B \neq A$인 집합 $B$를 $A$의 **진부분집합(prope
 두 집합 $A =$ \{ $1, 3, 5$ \}와 $B =$ \{ $1, 5, 7, 8$ \}에 대하여 합집합은 $A \cup B =$ \{ $1, 3, 5, 7, 8$ \}, 교집합은 $A \cap B =$ \{ $1, 5$ \}이다.  
 비슷한 방식으로 $X =$ \{ $1, 2, 8$ \}과 $Y =$ \{ $3, 4, 5$ \}에 대하여 합집합은 $X \cup Y =$ \{ $1, 2, 3, 4, 5, 8$ \}, 교집합은 $X \cap Y = \emptyset$이다.  
 따라서 $X$와 $Y$는 서로소이다.
+***
+두 개 이상의 집합의 합집합과 교집합은 비슷한 방법으로 확장 가능  
+집합 $A_1, A_2,\cdots,A_n$의 합집합 $\underset{i=1} {\overset{n}\bigcup}A_i$ 와 교집합 $\underset{i=1} {\overset{n}\bigcap}A_i$ 는 각각 다음과 같이 정의한다.  
+* $\underset{i=1} {\overset{n}\bigcup}A_i =$ \{ $x:$ 어떤 $i = 1,2,\ldots,n$에 대하여 $x \in A_i$ \}
+* $\underset{i=1} {\overset{n}\bigcap}A_i =$ \{ $x:$ 모든 $i = 1,2,\ldots,n$에 대하여 $x \in A_i$ \}  
+
+이때 각각의 $i \in$ \{ $1,2,\ldots,n$ \}마다 집합 $A_i$가 존재  
+각각의 $A_i$는 집합 $I =$ \{ $1,2,\ldots,n$ \}으로 **색인(index)** 을 매겼다고 생각하면 편리  
+이때 $I$를 집합족(collection) \{ $A_i:i \in I$ \}의 **색인집합(index set)** 이라 한다.  
+색인 집합은 무한집합족(infinite collection)을 다룰 때 편리함  
+$\Lambda$가 색인 집합이고 \{ $A_\alpha:\alpha \in \Lambda$ \}가 집합족(collection)일 때 이 집합의 합집합 $\underset{\alpha \in \Lambda} \bigcup A_\alpha$ 와 교집합 $\underset{\alpha \in \Lambda} \bigcap A_\alpha$ 는 각각 다음과 같이 정의한다.  
+* $\underset{\alpha \in \Lambda} \bigcup A_\alpha =$ \{ $x:$ 어떤 $\alpha \in \Lambda$에 대하여 $x \in A_\alpha$ \}
+* $\underset{\alpha \in \Lambda} \bigcap A_\alpha =$ \{ $x:$ 모든 $\alpha \in \Lambda$에 대하여 $x \in A_\alpha$ \}
+
+`예제 3`  
+색인 집합 $\Lambda =$ \{ $\alpha \in R:\alpha > 1$ \}과 각 $\alpha \in A$에 대하여 집합 $A_\alpha$를 $A_\alpha =$ \{ $x \in R:{-1 \over \alpha} \le x \le 1 + \alpha$ \}라 정의하면 다음이 성립  
+* $\underset{\alpha \in \Lambda} \bigcup A_\alpha =$ \{ $x \in R:x > -1$ \}, $\underset{\alpha \in \Lambda} \bigcap A_\alpha =$ \{ $x \in R:0 \le x \le 2$ \}  
+***
+집합 $A$에서 정의된 관계는 $A$에 속한 임의의 원소 $x, y$에 대하여 $x$가 $y$와 연관되어 있는지 따지는 개념  
+* $A$의 **관계(relation)** 는 $A$의 원소로 이루어진 순서쌍을 원소로 하는 임의의 집합 $S$이다.
+
+집합 $A$의 원소 $x$와 $y$가 관계 $S$를 만족하기 위한 필요충분조건은 $(x, y) \in S$이다.  
+$S$가 집합 $A$의 관계일 때, $(x, y) \in S$대신 $x \sim y$라 쓰기도 함  
+실수 집합에서 두 수를 비교할때 사용하는 '같다', '미만', '이상'의 개념은 관계의 대표적인 예  
+
+집합 $A$의 관계 $S$가 다음 세 조건을 만족하면 $A$의 **동치관계(equivalence relation)** 라 한다.
+1. **반사성(reflexivity)** 모든 $x \in A$에 대하여 $x \sim x$이다.
+2. **대칭성(symmetry)** $x \sim y$이면 $y \sim x$이다.
+3. **추이성(transivity)** $x \sim y$이고 $y \sim z$면 $x \sim z$이다.  
+
+`예시`  
+$x \sim y$가 고정된 정수 $n$으로 나누어 떨어지는 것을 $x \sim y$라 정의하면 ~은 정수 집합에서 정의된 동치관계이다.
